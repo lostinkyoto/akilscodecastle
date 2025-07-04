@@ -1,23 +1,75 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Mainlist from '../components/Mainlist.astro';
+
+const pageTitle = "Home Page";
 ---
 
-<html lang="en">
+<BaseLayout>
+  <main class="home-page">
+    <section class="content">
+      <h1>Akil's Code Palace</h1>
+      <h2> Halfway House for Web Experiments</h2>
+
+      <p>
+        Hello. This is the safe place my code goes to, to be weird. Until it knows who it wants to be when it grows up.
+      </p>
+
+      <p>
+        Below is a simple list of tests. As I keep building and breaking things, this list will grow:
+      </p>
+
+     <Mainlist />
+     
+    </section>
+  </main>
+
+  <style>
+    .home-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .content {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: #1a3fa1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 
 
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Akils Code Palace</title>
-  </head>
 
-
-
-
-  <body>
-    <h1>Akils Code Palace</h1>
-  </body>
-
-  
-</html>
+</BaseLayout>

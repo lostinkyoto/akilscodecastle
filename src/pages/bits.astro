@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+
+const pageTitle = "Bits";
+---
+
+<BaseLayout>
+  <main class="bits-page">
+
+    <section class="content">
+      <h1>Bits</h1>
+      <h2>Hangout spot for Components, Elements, and Wild Ideas</h2>
+
+      <p>
+        This page is to collect test components, UI fragments, and layout experiments. 
+        Everything here is in-progress, broken, or half-baked. 
+<br>
+       [If I'm being honest, maybe quarter baked]
+      </p>
+    </section>
+
+
+  </main>
+
+<style>
+  main.bits-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bits-page .content {
+    max-width: 60ch;
+  }
+</style>
+
+
+
+</BaseLayout>
+

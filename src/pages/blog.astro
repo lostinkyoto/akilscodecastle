@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const pageTitle = "My Astro Learning Blog";
+---
+
+<BaseLayout>
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+
+  <h1>Log</h1>
+    <p>List of stuff I'm learning for when I forget it</p>
+ 
+ 
+  <ul style="list-style: none;">
+    {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
+
+
+</div>
+
+
+
+</BaseLayout>

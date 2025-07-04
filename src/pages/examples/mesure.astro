@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1>Absolute Units</h1>
+  <p>Each box has a fixed width using a different absolute unit.</p>
+<section class="units">
+  <!-- px -->
+  <div class="unit" style="width:5px;"><code>5px</code></div>
+  <div class="unit" style="width:10px;"><code>10px</code></div>
+  <div class="unit" style="width:24px;"><code>24px</code></div>
+  <div class="unit" style="width:48px;"><code>48px</code></div>
+
+  <!-- pt -->
+  <div class="unit" style="width:6pt;"><code>6pt</code></div>
+  <div class="unit" style="width:12pt;"><code>12pt</code></div>
+  <div class="unit" style="width:18pt;"><code>18pt</code></div>
+
+  <!-- cm -->
+  <div class="unit" style="width:1cm;"><code>1cm</code></div>
+  <div class="unit" style="width:2cm;"><code>2cm</code></div>
+  <div class="unit" style="width:3cm;"><code>3cm</code></div>
+
+  <!-- mm -->
+  <div class="unit" style="width:5mm;"><code>5mm</code></div>
+  <div class="unit" style="width:10mm;"><code>10mm</code></div>
+  <div class="unit" style="width:20mm;"><code>20mm</code></div>
+
+  <!-- in -->
+  <div class="unit" style="width:0.5in;"><code>0.5in</code></div>
+  <div class="unit" style="width:1in;"><code>1in</code></div>
+  <div class="unit" style="width:1.5in;"><code>1.5in</code></div>
+
+  <!-- pc -->
+  <div class="unit" style="width:1pc;"><code>1pc</code></div>
+  <div class="unit" style="width:2pc;"><code>2pc</code></div>
+  <div class="unit" style="width:3pc;"><code>3pc</code></div>
+
+  <!-- q -->
+  <div class="unit" style="width:10q;"><code>10q</code></div>
+  <div class="unit" style="width:20q;"><code>20q</code></div>
+  <div class="unit" style="width:40q;"><code>40q</code></div>
+</section>
+
+  <style>
+    .units {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .unit {
+      border: 1px solid red;
+      padding: 0.5rem;
+      height: 2rem;
+      background: #f9f9f9;
+      font-family: monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+  </style>
+</BaseLayout>

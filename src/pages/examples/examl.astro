@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+---
+<BaseLayout>
+
+  <h1>Flex Display Scenarios</h1>
+
+  <section class="flex-demo">
+    <h2>Default Flex (row)</h2>
+    <div class="flex-box">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+    </div>
+  </section>
+
+  <section class="flex-demo">
+    <h2>With Padding and Gap</h2>
+    <div class="flex-box padded gap">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+    </div>
+  </section>
+
+  <section class="flex-demo">
+    <h2>justify-content: space-between</h2>
+    <div class="flex-box space-between">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+    </div>
+  </section>
+
+  <section class="flex-demo">
+    <h2>align-items: center</h2>
+    <div class="flex-box align-center" style="height: 100px;">
+      <div class="item tall">One</div>
+      <div class="item">Two</div>
+    </div>
+  </section>
+
+  <section class="flex-demo">
+    <h2>flex-direction: column</h2>
+    <div class="flex-box column">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+    </div>
+  </section>
+
+  <section class="flex-demo">
+    <h2>flex-wrap: wrap</h2>
+    <div class="flex-box wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+
+  <style>
+    .flex-box {
+      display: flex;
+      border: 1px solid #aaa;
+      background: #f9f9f9;
+    }
+
+    .item {
+      background: lightblue;
+      padding: 1rem;
+      margin: 0.25rem;
+      border: 1px solid #333;
+    }
+
+    .flex-demo {
+      margin-bottom: 2rem;
+    }
+
+    .padded {
+      padding: 1rem;
+    }
+
+    .gap {
+      gap: 1rem;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .tall {
+      height: 60px;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+  </style>
+
+</BaseLayout>

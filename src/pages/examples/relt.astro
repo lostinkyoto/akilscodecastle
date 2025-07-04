@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1>Relative Units in Action</h1>
+  <p>Each box uses a different relative unit for its width.</p>
+
+  <section class="units">
+    <!-- Percentage -->
+    <div class="unit" style="width:50%;"><code>50%</code></div>
+
+    <!-- em (relative to current element font size) -->
+    <div class="unit" style="width:2em;"><code>2em</code></div>
+
+    <!-- rem (relative to root element font size) -->
+    <div class="unit" style="width:1.5rem;"><code>1.5rem</code></div>
+
+    <!-- Viewport width and height -->
+    <div class="unit" style="width:10vw;"><code>10vw</code></div>
+    <div class="unit" style="width:50vh;"><code>50vh</code></div>
+
+    <!-- Viewport min/max -->
+    <div class="unit" style="width:5vmin;"><code>5vmin</code></div>
+    <div class="unit" style="width:5vmax;"><code>5vmax</code></div>
+
+    <!-- Font-relative sizing -->
+    <div class="unit" style="width:1ex;"><code>1ex</code></div>
+    <div class="unit" style="width:20ch;"><code>20ch</code></div>
+    <div class="unit" style="width:1.2lh;"><code>1.2lh</code></div>
+  </section>
+
+  <style>
+    .units {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .unit {
+      border: 1px solid #4caf50;
+      background: #e8f5e9;
+      padding: 0.5rem;
+      height: 2rem;
+      font-family: monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+  </style>
+</BaseLayout>

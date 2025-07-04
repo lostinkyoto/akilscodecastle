@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+export const title = "Rounded Nav Demo";
+---
+
+<BaseLayout title="Rounded Nav Demo">
+
+  <nav>
+
+    <div class="nav-left">
+      <button class="nav-button active">● Home</button>
+      <button class="nav-button">Contribution</button>
+      <button class="nav-button">Our Mission</button>
+    </div>
+
+    <div class="logo">
+      <span>🔆</span> <span>Atacama</span>
+    </div>
+
+    <div class="nav-right">
+      <button class="nav-button">
+        Problems <span class="dropdown-arrow">▾</span>
+      </button>
+      <button class="nav-button">
+        Projects <span class="dropdown-arrow">▾</span>
+      </button>
+      <button class="contact-button">Contact Us</button>
+    </div>
+  </nav>
+
+    <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      border-radius: 1rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-button {
+      padding: 0.5rem 1rem;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-button:hover {
+      background: #e0e0e0;
+    }
+
+    .active {
+      background: #fff;
+      border: 1px solid #000;
+    }
+
+    .contact-button {
+      padding: 0.5rem 1.2rem;
+      border: 1px solid #000;
+      border-radius: 999px;
+      background: transparent;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dropdown-arrow {
+      font-size: 0.7rem;
+    }
+  </style>
+
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+---
+<BaseLayout>
+
+<div class="one">
+    <p>This is a div with inline display</p>
+</div>
+<div class="one">
+    <p>Its width and height are ignored</p>
+</div>
+
+<div class="one">
+    <p>The border will collapse around the text content tightly</p>
+</div>
+
+<div class="one padded">
+    <p>This is what it looks like with some padding of 0.25</p>
+</div>
+
+<div class="one padded-more">
+  <p>This div has 0.5rem padding </p>
+</div>
+
+
+<div class="one padded-more">
+  <p>This div has 0.5rem padding </p>
+</div>
+
+<div class="one padded-six">
+  <p>This div has 2rem padding </p>
+</div>
+
+
+<style>
+div.one{
+    border: 1px solid red;
+    display:inline;
+}
+
+div.padded{
+    padding: 0.25px;
+}
+
+div.padded-more {
+  padding: 0.5rem;
+}
+
+div.padded-six{
+    padding: 2rem;
+}
+</style>
+
+</BaseLayout>

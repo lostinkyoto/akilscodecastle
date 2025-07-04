@@ -1,7 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-
+import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "Bits";
 ---
 
@@ -15,28 +13,30 @@ const pageTitle = "Bits";
       <p>
         This page is to collect test components, UI fragments, and layout experiments. 
         Everything here is in-progress, broken, or half-baked. 
-<br>
-       [If I'm being honest, maybe quarter baked]
+        <br />
+        [If I'm being honest, maybe quarter baked]
       </p>
+
+      <h3>Build Pages</h3>
+       <ul style="list-style: none;">
+       <li><a href="/builds/sub/headrs/rounded">Rounded Nav Demo</a></li>
+      </ul>
+      
     </section>
-
-
   </main>
 
-<style>
-  main.bits-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  <style>
+    main.bits-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-  .bits-page .content {
-    max-width: 60ch;
-  }
-</style>
-
+    .bits-page .content {
+      max-width: 60ch;
+    }
 
 
+  </style>
 </BaseLayout>
-

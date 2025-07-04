@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+---
+<BaseLayout>
+
+<div class="one">
+  <p>This is a flex container (default row) It makes an element a flex container, which means:
+
+    The container's direct children become flex items.
+
+    The layout of these children is controlled by various flex properties like:
+
+        direction (row, column)
+
+        alignment (centered, spaced out, etc.)
+
+        wrapping, gaps, and more</p>
+</div>
+
+<div class="one padded gap">
+  <p>Flex with padding and gap</p>
+</div>
+
+<div class="one space-between">
+  <p>justify-content: space-between</p>
+
+  <div> box one</div>
+  <div> box two</div>
+</div>
+
+<div class="one space-between">
+  <p>justify-content: space-between</p>
+
+  <div> box one</div>
+  <div> box two</div>
+  <div> box three</div>
+  <div> box four</div>
+</div>
+
+<div class="one align-center tall">
+  <p>align-items: center</p>
+    <div> box one</div>
+  <div> box two</div>
+  <div> box three</div>
+  <div> box four</div>
+</div>
+
+<div class="one column">
+  <p>flex-direction: column. Children stack vertically, like blocks, but:
+
+You get full control over alignment (justify-content, align-items, gap, etc.).
+
+The children do not stretch to 100% width unless you tell them to.</p>
+    <div> box one</div>
+  <div> box two</div>
+  <div> box three</div>
+  <div> box four</div>
+
+</div>
+
+
+
+<style>
+
+    div{
+        border: 1px solid red;
+    }
+div.one {
+  border: 1px solid red;
+  display: flex;
+}
+
+div.padded {
+  padding: 0.5rem;
+}
+
+div.gap {
+  gap: 1rem;
+}
+
+div.space-between {
+  justify-content: space-between;
+}
+
+div.align-center {
+  align-items: center;
+}
+
+div.tall {
+  height: 100px;
+}
+
+div.column {
+  flex-direction: column;
+}
+
+div.wrap {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+div.item {
+  background: lightblue;
+  padding: 0.5rem;
+  border: 1px solid #500303;
+}
+
+p{
+    border: 2px solid green;
+}
+</style>
+
+</BaseLayout>
+
